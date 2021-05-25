@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Валидация формы</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+
+ <body>
+ 
+    <div class="container">
+      <div class="row justify-content-center">
+       <div class="col-4">
+     <h2>Валидация формы</h2>
+      <hr>
+  <form class="form" id="myForm" role="form">
+  
+  <div class="form-group">
+    <label for="inputSurname">Введите фамилию:</label>
+    <input type="text" class="form-control" name="surname" id="inputSurname" placeholder="Введите фамилию">
+  </div>
+  
+  <div class="form-group">
+    <label for="inputName">Введите имя:</label>
+    <input type="text" class="form-control" name="name" id="inputName" placeholder="Введите имя">
+  </div>  
+  
+  <div class="form-group">
+    <label for="inputOtchestvo">Введите отчество:</label>
+    <input type="text" class="form-control" name="otchestvo" id="inputOtchestvo" placeholder="Введите отчество">
+  </div>
+  
+  <div class="form-group">
+    <label for="inputPol">Введите пол:</label>
+    <input type="text" class="form-control" name="pol" id="inputPol" placeholder="Введите пол">
+  </div>
+  
+  <div class="form-group">
+    <label for="inputEmail">Введите email:</label>
+    <input type="email" class="form-control" name="email" id="inputEmail" placeholder="Введите email">
+  </div>  
+  
+  <button type="submit" class="btn btn-primary">Отправить</button>
+  
+</form>
+   </div>
+    </div>
+   </div>
+   
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+ 
+ <script>
+  $("#myForm").validate({
+  rules: {
+    email: {
+      required: true,
+      email: true
+    },
+	
+    name: {
+    required: true,
+      minlength: 5  
+    },
+	
+	surname: {
+    required: true,
+      minlength: 6  
+    },
+	
+	otchestvo: {
+    required: true,
+      minlength: 7  
+    }
+    
+    },
+  messages: {
+  
+    email: {
+      required: "Поле email обязательно для заполнения",
+    },
+	
+  name: {
+    required: "Поле имя обязательно для заполнения",
+    minlength: jQuery.validator.format("Длина имени должна быть больше 5-ти символов")
+  },
+  
+ surname: {
+    required: "Поле фамилия обязательно для заполнения",
+    minlength: jQuery.validator.format("Длина фамилии должна быть больше 6-ти символов")
+  },
+
+ otchestvo: {
+    required: "Поле отчество обязательно для заполнения",
+    minlength: jQuery.validator.format("Длина отчества должна быть больше 7-ти символов")
+  },  
+  
+ pol: {
+    required: "Поле пол обязательно для заполнения",
+  }  
+  
+  },
+   submitHandler: function() {
+     alert("Валидация успешна!");
+  }
+});
+</script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+</body>
+</html>
