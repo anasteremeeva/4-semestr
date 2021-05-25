@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Галерея изображенией на основе FlippingGallery.js</title>
+		<link rel="stylesheet" type="text/css" href="default.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	    <script type="text/javascript" src="jquery.flipping_gallery.js"></script>
+	    <link rel="stylesheet" type="text/css" href="flipping_gallery.css" />
+	    <link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body class="demo3">
+		<div class="header">
+			<h1>Галерея jQuery Flipping : используя колесо мыши</h1>
+			<h2>Наведите на изображение и используйте колесо мыши</h2>
+		</div>
+		<div class="main">
+			<div class="page_container">
+				<div class="gallery">
+	<a href="#"><img src="b1.png"></a>
+    <a href="#"><img src="b2.png"></a>
+    <a href="#"><img src="b3.png"></a>
+    <a href="#"><img src="b4.png"></a>
+    <a href="#"><img src="b5.png"></a>
+	<a href="#"><img src="b1.png"></a>
+    <a href="#"><img src="b2.png"></a>
+    <a href="#"><img src="b3.png"></a>
+    <a href="#"><img src="b4.png"></a>
+    <a href="#"><img src="b5.png"></a>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(document).ready( function() {
+				$(".gallery").flipping_gallery({
+					enableScroll: true
+				});
+			});
+			
+		</script>
+		
+	</body>
+</html>
