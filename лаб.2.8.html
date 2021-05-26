@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var n=2;
+var timer;
+function blackBorder() {
+for (var i=1; i<6; i++){
+document.getElementById("img"+i).style.borderColor="black";
+}
+}
+function changeImage(){
+if(n<5){
+document.getElementById("mainimg").src="a"+n+".png";
+blackBorder();
+document.getElementById("img"+n).style.borderColor="red";
+n++;}
+else{
+document.getElementById("mainimg").src="a"+n+".png";
+blackBorder();
+document.getElementById("img"+n).style.borderColor="red";
+n=1;}
+}
+function ShowImage(n){
+document.getElementById("mainimg").src="a"+n+".png";
+blackBorder();
+document.getElementById("img"+n).style.borderColor="red";
+n++;
+}
+</script>
+</head>
+<body>
+<input type="button" onclick="timer=setInterval('changeImage()',1000)" value="Включить">
+<input type="button" onclick="clearInterval(timer)" value="Выключить"><br>
+<img id="mainimg" border="5px" onclick="changeImage()" src="a1.png" width="512"/><br>
+<img id="img1" border="3px" onclick="ShowImage(1)"src="a1.png" width="161"/>><br>
+<img id="img2" border="3px" onclick="ShowImage(2)"src="a2.png" width="161"/>><br>
+<img id="img3" border="3px" onclick="ShowImage(3)"src="a3.png" width="161"/>><br>
+<img id="img4" border="3px" onclick="ShowImage(4)"src="a4.png" width="161"/>><br>
+<img id="img5" border="3px" onclick="ShowImage(5)"src="a5.png" width="161"/>><br>
+</body>
+</html
