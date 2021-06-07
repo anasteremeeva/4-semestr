@@ -1,0 +1,45 @@
+<html>
+<head>
+<body>
+<canvas id="myChart" width="300" height="300"></canvas>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 18, 2, 10, 6, 14],
+            backgroundColor: [
+                'rgba(240, 128, 128, 0.5)',
+                'rgba(128, 0, 128, 0.5)',
+                'rgba(205, 92, 92, 0.5)',
+                'rgba(233, 150, 122, 0.5)',
+                'rgba(250, 128, 114, 0.5)',
+                'rgba(75, 0, 130, 0.5)'
+            ],
+            borderColor: [
+           	'rgba(240, 128, 128, 0.5)',
+                'rgba(128, 0, 128, 0.5)',
+                'rgba(205, 92, 92, 0.5)',
+                'rgba(233, 150, 122, 0.5)',
+                'rgba(250, 128, 114, 0.5)',
+                'rgba(75, 0, 130, 0.5)'
+            ],
+            borderWidth: 10
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+</body>
+</html>
